@@ -1,3 +1,24 @@
-select last_name, count(last_name) from actor
-   group by last_name HAVING count(last_name) = 1 
-   order by last_name desc;
+1) select * from actor;
+2)select actor_id, first_name, last_name from actor where first_name ='john';
+3) select actor_id, first_name, last_name from actor where last_name ='Neeson';
+4)select actor_id, first_name, last_name from actor where actor_id % 10 = 0;
+5) select title, description, film_id from film where film_id = 100;
+6) select film_id, title, rating from film where rating ='R';
+7)select film_id, title, rating from film where rating !='R';
+8)SELECT title, length from film order by length limit 10; 
+9)select title, rating, length from film where length=(select MAX(length)from film);
+10)SELECT title, special_features from film where special_features = 'Deleted Scenes';
+11)select last_name, count(last_name) from actor group by last_name HAVING count(last_name) = 1 order by last_name desc;
+12)select last_name, count(last_name) from actor group by last_nalast_nameme HAVING COUNT(last_name)>1 order by count(last_name) desc; 
+13)select f.actor_id, a.first_name, a.last_name, count(f.actor_id) from film_actor f join actor a on f.actor_id = a.actor_id group by f.actor_id order by count(f.actor_id) desc limit 1;
+14) select title, release_year from film where title='Academy Dinosaur';
+15)select avg(length) from film;
+16)select category, avg(length) from film_list group by category;
+17)%robot%
+18) select count(release_year) from film where release_year = 2010;
+19) select title, category from film_list where category = 'Horror';
+20)date_add();
+ interval ;
+21)
+
+
